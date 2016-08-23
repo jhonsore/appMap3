@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title></title>
+
+    <link rel="stylesheet" href="js/Framework7-1.4.2/src/css/framework7.ios.css">
+    <link rel="stylesheet" href="js/Framework7-1.4.2/src/css/framework7.ios.colors.css">
+    <link rel="stylesheet" href="css/geral.css">
+    <link href="css/reset.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="views">
+        <div class="view view-main">
+            <div class="pages">
+
+                <div data-page="index" class="page" id="index">
+                    <div class="page-content">
+                        <div class="box-login">
+                            <div class="box-login__inner">
+                                <span class="box-login__field"><span class="box-login__field__inner"><input type="text" placeholder="Login"></span></span>
+                                <span class="box-login__field"><span class="box-login__field__inner"><input type="password" placeholder="Senha"></span></span>
+                                <button id="js-login" class="reset-button button-login">LOGIN</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-page="home" class="page cached navbar-fixed no-swipeback" id="home">
+
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+
+                            </div>
+                            <div class="center">APP</div>
+                            <div class="right">
+                                <a href="#" class="link">
+                                    <i class="icon icon-bars"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-content">
+
+                        <div class="list-itens">
+                            <div class="list-itens__inner">
+                                <ul>
+                                    <li class="js-list-item list-item">
+                                        Item 1
+                                        <em></em>
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 2
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 3
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 4
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 5
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 6
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 6
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 6
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 6
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 6
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 6
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 6
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 6
+                                    </li>
+                                    <li class="js-list-item list-item">
+                                        Item 6
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div data-page="mapa" class="page cached navbar-fixed no-swipeback" id="mapa">
+
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                                <a href="#" class="link icon-only" id="bt-back-mapa">
+                                    <i class="icon icon-back"></i>
+                                </a>
+                            </div>
+                            <div class="center">APP</div>
+                            <div class="right">
+                                <a href="#" class="link">
+                                    <i class="icon icon-bars"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-content">
+                        <!--<div class="box-initial">
+                            <div class="box-initial-message">
+                                <div class="box-initial-message-inner">
+                                    <a href="#" id="js-button-begin" class="box-initial-message-button">Iniciar aplicação</a>
+                                </div>
+                            </div>
+                        </div>-->
+
+                        <div id="out">
+
+                        </div>
+
+                        <div class="wrapper-control hide">
+                            <div class="wrapper-control__inner">
+                                <div class="border-separator box-add-location">
+                                    <div class="box-add-location__address">
+                                        <form name="address" id="form-add-adress">
+                                            <div class="adress-field">
+                                                <span class="adress-field-box"><input class="adress-field-input" name="addressStr" type="text"></span>
+                                            </div>
+                                            <input class="adress-field-button" type="button" value="Add" id="js-bt-add-location">
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="box-add-list-location">
+                                    <form name="listOfLocations" id="js-list-of-locations">
+                                        <textarea class="input-list-locations" name="inputList" id="js-input-list-locations" placeholder="One destination per line"></textarea><br>
+                                        <input type="button" id="js-bt-add-list-location" value="Add list of locations">
+                                    </form>
+                                </div>
+                                <div class="router-options border-separator">
+                                    <strong class="router-options__title">Route options</strong>
+                                    <form name="travelOpts">
+                                        <p class="router-options__line"><input id="walking" type="checkbox"> Walking<br></p>
+                                        <p class="router-options__line"><input id="bicycling" type="checkbox"> Bicycling<br></p>
+                                        <p class="router-options__line"><input id="avoidHighways" type="checkbox"> Avoid highways<br></p>
+                                        <p class="router-options__line"><input id="avoidTolls" type="checkbox"> Avoid toll roads</p>
+                                    </form>
+                                </div>
+
+                                <a href="#" class="wrapper-control__bt" id="route-roundtrip">Calculate Fastest Roundtrip</a>
+                                <a href="#" class="wrapper-control__bt" id="route-trip">Calculate Fastest A-Z Trip</a>
+                                <a href="#" class="wrapper-control__bt" id="start-over-route">Start Over Again</a>
+                            </div>
+                        </div>
+                        <div id="box-mapa" style="width:100%; height:100%">
+                            <div id="map_canvas" style="width:100%; height:100%"></div>
+                        </div>
+                        <button id="bt-menu">
+                            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 43 38.001" enable-background="new 0 0 43 38.001" xml:space="preserve"><g><g><path fill="#3498db" d="M4,8h35c2.209,0,4-1.792,4-4c0-2.211-1.789-4-3.998-4H4C1.792,0,0,1.789,0,4C0,6.208,1.792,8,4,8z     M39,14.999H4c-2.209,0-4,1.791-4,4.002c0,2.209,1.792,4,4,4h35c2.209,0,4-1.791,4-4C43,16.79,41.209,14.999,39,14.999z     M39,29.999H4c-2.209,0-4,1.791-4,4.002c0,2.209,1.792,4,4,4h35c2.209,0,4-1.791,4-4C43,31.79,41.209,29.999,39,29.999z"></path></g></g></svg>
+                        </button>
+                        <button id="button-pan">
+
+                            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="#cccccc" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24" x="0px" y="0px"><path d="M18.419 5.591l-4.247 10.6-1.591-4.773-4.767-1.589 10.6-4.239zM22.006 2l-20.006 8 9 3 3 9 8.011-20z"></path></svg>
+
+                        </button>
+                        <div id="box-menu" class="wrapper-control">
+                            <div class="wrapper-control__inner">
+                                <div>
+                                    <strong>Dados do percurso total</strong>
+                                    <div id="trip-data"></div>
+                                </div>
+                                <br>
+                                <div>
+                                    <strong>Dados do percurso A>B</strong>
+                                    <div id="trip-data-move"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Popup -->
+    <div class="popup popup-entrega">
+        <div class="content-block">
+            <p>Descrição Entrega</p>
+            <p><a href="#" class="close-popup color-blue">Close popup</a></p>
+            <ul>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+                <li>Lorem ipsum</li>
+            </ul>
+            <p><a href="#" id="bt-efetuar-entrega" class="button button-big button-raised button-fill">Efetuar entrega</a></p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/Framework7-1.4.2/src/js/framework7.js"></script>
+    <script type="text/javascript" src="js/libraries/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/app/initFramework7.js"></script>
+    <script type="text/javascript" src="js/app/config.js"></script>
+
+    <!-- comunicação entre ios e js -->
+    <script type="text/javascript" src="js/iosBridge.js"></script>
+
+    <!-- maps -->
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="js/libraries/BpTspSolver.js"></script>
+
+    <!-- utilitários -->
+    <script type="text/javascript" src="js/libraries/utils.js"></script>
+    <script type="text/javascript" src="js/libraries/customEventHandler.js"></script>
+
+    <!-- Aplicação -->
+    <script type="text/javascript" src="js/app/appMapUser.js"></script>
+    <script type="text/javascript" src="js/app/appMap.js"></script>
+    <script type="text/javascript" src="js/app/app.js"></script>
+</body>
+</html>

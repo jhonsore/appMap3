@@ -1,0 +1,45 @@
+/*
+    * js->app: getPositionUser
+    * chamado para obter a posição do usuário no aplicativo mobile
+    * deve retornar um json com o formato
+    * caso encontre a posição
+    {
+    result:
+        {
+            latitude: "valor",
+            longitude: "valor"
+        }
+    }
+
+    * erro ao retornar a posição
+    result:
+            {
+                error: "valor"
+            }
+        }
+
+*/
+
+/*
+    * js -> app: startUpdateposUser
+    * chamado quando o mapa for aberto para o usuário com a rota traçada
+    * esse método chama o dispositivo iniciando a atualização da posição do usuário
+    * nesse método roda um setInterval que fica chamando o js a cada n segundos para
+    * atualizar a posição do usuário no app
+    * esse método (startUpdateposUser) chamará o método abaixo (updatePosUser)
+
+    ******************************
+
+    * app -> js updatePosUser
+    * esse método será responsável por atualizar a posição do usuário enquanto ele se move
+    * deve retornar um json com a formatação seguinte:
+
+    {
+        result:
+            {
+                latitude: "valor",
+                longitude: "valor"
+            }
+    }
+
+*/
